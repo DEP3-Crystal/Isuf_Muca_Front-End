@@ -1,0 +1,45 @@
+
+#img-container{
+padding-top:10%;
+padding-left:0;
+padding-right:0;
+}
+
+#image{
+    width:100%;
+}
+
+#bell{
+    position:relative;
+    margin-top: -530px;
+    left:45%;
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    border: 5px solid grey;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    z-index:1;
+}
+
+#counter{
+    position:relative;
+    margin-top:-220px;
+    left:54%;
+    width:45px;
+    height:45px;
+    border-radius: 50%;
+    background-color: #c0392b;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    z-index:2;
+}
+
+#counter span{
+    color: white;
+    font-size:18px;
+}
+
