@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID PARENT PROPERTIES</title>
+
+    <style>
+        /*
+
+display --> grid | inline-grid                        (defines the element as a grid layout)
+
+grid-template-rows --> 10px auto 1fr                  (define how many rows and how much space occupies each row)
+
+grid-template-columns --> 10px auto 1fr               (define how many columns and how much space occupies each column)
+
+grid-template --> [row-name-1] 10px [row-name-1] 20px  / [column-name-2] 10px [column-name-2] 20px     (short-hand to define rows and columns)
+
+grid-areas --> name-of-field | none | .               (defines a template by referencing the grid areas)
+
+gap --> 5px 10px                                      (defines the space between each column and row)
+
+column-gap --> 5px                                    (defines the space between each column)
+
+row-gap --> 5px                                       (defines the space between each row)
+
+justify-items --> start | center | end | stretch      (aligns items horizontally in grid)
+
+align-items --> start | center | end | stretch        (aligns items vertically in grid)
+
+place-items --> start | center | end | stretch        (acts as a shorthand to give common values to both align-items, justify-items)
+
+justify-content --> start | center | end | stretch    (aligns all the content of the grid horizontally)
+
+
+*/
+        .grid-wrapper {
+            background-color: beige;
+            display: grid;
+            height: 400px;
+            grid-template-columns: 300px 300px;
+            place-items: start end;
+            row-gap: 20px;
+            column-gap: 30px;
+            justify-content: start;
+        }
+
+        .item-1 {}
+
+        h2 {
+            display: inline;
+        }
+
+        .item {
+            color: black;
+            font-weight: normal;
+            border: 1px solid black;
+            text-align: center;
+            background-color: lightgray;
+            border-radius: 5px;
+            display: inline;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="grid-wrapper">
+        <div class="item item-1">
+            <h2>ITEM 1</h2>
+        </div>
+        <div class="item">
+            <h2>ITEM 2</h2>
+        </div>
+        <div class="item">
+            <h2>ITEM 3</h2>
+        </div>
+        <div class="item">
+            <h2>ITEM 4</h2>
+        </div>
+        <div class="item">
+            <h2>ITEM 5</h2>
+        </div>
+        <div class="item">
+            <h2>ITEM 6</h2>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

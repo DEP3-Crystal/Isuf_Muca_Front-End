@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab.html</title>
+
+    <style>
+        body {
+            background-color: beige;
+        }
+
+        .header-wrapper {
+            display: grid;
+            grid-template-columns: 5fr 2fr 5fr;
+            grid-template-rows: 1fr 10fr 10fr 1fr;
+            gap: 15px 15px;
+            transform: rotate(-45deg);
+
+        }
+
+        .header {
+            grid-row: 2 / 3;
+            grid-column: 1 / 3;
+            gap: 5px 0;
+            justify-self: end;
+            align-self: start;
+            display: grid;
+            grid-template-rows: auto auto;
+            justify-items: end;
+            align-items: start;
+        }
+
+        .vertical {
+            color: orangered;
+            display: inline;
+            writing-mode: vertical-lr;
+            justify-self: end;
+            margin: 0;
+        }
+
+        h1 {
+            display: inline;
+        }
+
+        .demo-list {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            justify-self: end;
+            align-self: center;
+        }
+
+        li.demo-list-element:nth-of-type(1) {
+            border-top: 8px solid black;
+        }
+
+        li.demo-list-element {
+            padding: 1px 0 1px 0;
+            margin: 0;
+            border-bottom: 8px solid black;
+            padding: 2px 0 2px 0;
+        }
+
+        .workshop-link {
+            grid-column: 3 / -1;
+            grid-row: 2 / 3;
+            border-top: 8px solid black;
+            border-bottom: 8px solid black;
+            justify-self: start;
+            align-self: center;
+        }
+
+        .follow-links {
+            grid-column: 2 / -1;
+            grid-row: 3 / 4;
+            align-self: end;
+            justify-self: start;
+            border-bottom: 28px solid orangered;
+            width: 80%;
+        }
+
+        a {
+            color: black;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        @media (max-width: 990px) {
+
+            .header-wrapper {
+                display: grid;
+                grid-template-columns: 1fr 3fr 1fr 3fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                transform: none;
+            }
+
+            .header {
+                grid-row: 1 / 2;
+                grid-column: 2 / 3;
+                display: grid;
+                grid-template-rows: auto auto;
+                justify-items: start;
+                align-items: start;
+            }
+
+            .demo-list {
+                grid-column: 2 / 3;
+                grid-row-start: 2;
+                align-self: start;
+                justify-self: start;
+            }
+
+            .workshop-link {
+                grid-column: 3 / 5;
+                grid-row: 1 / 2;
+                align-self: end;
+                justify-self: start;
+                border-top: 6px solid black;
+                border-bottom: 6px solid black;
+            }
+
+            .follow-links {
+                grid-column: 3 / -1;
+                grid-row: 2 / -1;
+                align-self: end;
+                justify-self: start;
+                border-bottom: 12px solid orangered;
+            }
+
+            .vertical {
+                writing-mode: vertical-lr;
+                justify-self: end;
+                align-self: start;
+            }
+
+            a {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+        }
+
+        @media (max-width: 768px) {
+            .header-wrapper {
+
+                display: grid;
+                grid-template-columns: fit-content(10%) fit-content(80%) fit-content(10%);
+                grid-template-rows: fit-content(40%) fit-content(35%) fit-content(25%);
+                transform: none;
+            }
+
+            .header {
+
+                justify-items: end;
+                align-items: start;
+            }
+
+            .demo-list {
+                grid-column: 2 / 3;
+                grid-row: 2 / 3;
+                justify-self: center;
+                align-self: start;
+            }
+
+            .workshop-link {
+                grid-column: 2 / 3;
+                grid-row: 3 / -1;
+                justify-self: center;
+                align-self: end;
+                border-top: 6px solid black;
+                border-bottom: 6px solid black;
+
+            }
+
+            .follow-links {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+                justify-self: center;
+                align-self: end;
+                border-bottom: 12px solid orangered;
+                width: 60%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-wrapper">
+            <div class="header">
+                <h1>The Experimental Layout Lab</h1>
+                <h1 class="vertical">of Jen Simmons</h1>
+            </div>
+            <div class="demo-list">
+                <h2>The Conference Talks</h2>
+                <ul>
+                    <li class="demo-list-element">1. <a href="https://youtu.be/jreccgYLfx8">Modern Layouts: Getting Out
+                            of Our Ruts</a></li>
+                    <li class="demo-list-element">2. <a href="https://youtu.be/aYgMExb-mlo">Revolutionize Your Page:
+                            Real Art Direction on the
+                            Web</a>
+                    </li>
+                    <li class="demo-list-element">3. <a href="https://youtu.be/t0b3uBoDkBs">Designing with Grid</a></li>
+                    <li class="demo-list-element">4. <a href="https://youtu.be/jBwBACbRuGY">Everything You Know About
+                            Web Design Just Changed</a>
+                    </li>
+                    <li class="demo-list-element">5. <a href="https://youtu.be/AMPKmh98XLY">Designing Intrinsic
+                            Layouts</a></li>
+                </ul>
+            </div>
+            <p class="follow-links">Follow <a href="http://twitter.com/jensimmons">@jensimmons</a> on Twitter for more
+                as
+                it happens.</p>
+            <div class="workshop-link">
+                <ul>
+                    <li><a href="https://youtube.com/layoutland">Layout Land videos</a></li>
+                    <li><a href="http://jensimmons.com">jensimmons.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+</body>
+
+</html>

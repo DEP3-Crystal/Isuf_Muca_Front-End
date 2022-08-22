@@ -1,0 +1,23 @@
+body,
+.social-header,
+.social-paragraph {
+    background: none;
+    color: #000;
+}
+
+nav,
+.child-3 {
+    display: none;
+}
+
+span#orange-like {
+    color: #000;
+}
+
+.container.about-me-container {
+    box-shadow: none;
+}
+
+img {
+    filter: grayscale(90%);
+}
