@@ -1,0 +1,377 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+}
+
+body {
+    background: url('https://raw.githubusercontent.com/WebToLearn/personal-page-css-workshop/master/img/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5em;
+    margin: 0 0 1.5em 0;
+}
+
+.page-grid {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 990px 1fr;
+    grid-template-areas:
+        ". container ."
+        ". footer .";
+}
+
+.container {
+    grid-area: container;
+    background: white;
+    padding: 30px 20px;
+    border: 1px solid #f1f1f1;
+    box-shadow: 0px 6px #c0392b;
+    border-radius: 0px 0px 4px 4px;
+}
+
+.container.portfolio-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.image {
+    width: calc(100% / 3 - 20px);
+}
+
+.container.contact-container {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-item {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-item-header {
+    color: #484848;
+    font-weight: 100;
+    margin: 12px auto 0 auto;
+    text-align: center;
+}
+
+.contact-item-text {
+    color: #484848;
+    margin: 4px auto 0 auto;
+    font-weight: 100;
+    text-align: center;
+}
+
+
+
+.footer {
+    grid-area: footer;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    background: white;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0px 4px #ccc;
+    border-radius: 4px;
+}
+
+.copyright {
+    margin: 0;
+}
+
+.menu {
+    width: 990px;
+    margin: 80px auto 0 auto;
+    text-align: center;
+}
+
+.menu--light {
+    margin: 30px auto 0 auto;
+}
+
+.menu-item {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 20px;
+    padding: 10px 40px 10px 40px;
+    background: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    outline: none;
+    color: #888;
+    vertical-align: bottom;
+}
+
+.menu-item-active {
+    position: relative;
+    color: #c0392b;
+    padding: 15px 40px 15px 40px;
+    margin-top: 0;
+}
+
+
+
+.title {
+    margin: 0;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.subtitle {
+    color: #999;
+    font-size: 1.5em;
+    line-height: 1em;
+    margin: 0 0 1em 0;
+    text-align: center;
+}
+
+.header {
+    margin-top: 30px;
+}
+
+hr {
+    margin: 25px 0;
+    border: 1px solid #f1f1f1;
+}
+
+#orange-like{
+    color:#FF4500;
+}
+
+/*ABOUT ME STYLE*/
+
+
+
+
+.wrapper-top {
+    display: grid;
+    grid-template-columns: 2fr 4fr 3fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+}
+
+.wrapper-bottom {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+
+
+.child-3 {
+    border-left: 1px solid lightgray;
+}
+
+.child-3-item {
+    display: block;
+    margin-left: 12px;
+    border-bottom: 1px solid lightgrey;
+    width: 90%;
+    text-align: left;
+    color: orangered;
+    font-weight: 100;
+    padding: 15px;
+}
+
+
+.social {
+    border: 1px solid lightgray;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-row-gap: 20px;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.social-header {
+    color: orangered;
+    margin: 1px 2px 1px 2px;
+}
+
+.social-paragraph {
+    color: #C0C0C0;
+    font-size: 14px;
+    margin: 1px;
+}
+
+#name-header {
+    font-size: 42px;
+}
+
+#proffession-header {
+    font-size: 22px;
+    color: lightgray;
+    font-weight: bold;
+}
+
+#explanation {
+    font-weight: lighter;
+}
+
+
+
+
+
+/* MEDIA QURIES*/
+
+@media (max-width: 990px) {
+    .menu {
+        width: 100%;
+        padding: 6px;
+        background-color: lightgrey;
+    }
+
+    .menu-item-active {
+        position: default;
+        color: #c0392b;
+        margin: 0 auto 0 auto;
+        padding: default;
+        border: 1px solid grey;
+    }
+
+    .container.portfolio-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+
+
+    }
+
+    .image {
+        width: calc(100% / 2 - 20px);
+    }
+
+
+    .page-grid {
+        display: block;
+    }
+
+    .footer {
+        border-radius: 0;
+    }
+
+    .menu-item {
+        display: block;
+        border: 1px solid grey;
+        margin: 0 auto 0 auto;
+        padding: default;
+
+    }
+
+    .container.contact-container {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    /*About me styling start*/
+    .wrapper-top {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    .wrapper-bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: stretch;
+    }
+
+    .child-3 {
+        display: none;
+    }
+
+    /*About me styling end*/
+
+}
+
+@media (max-width: 768px) {
+
+    .menu {
+        width: 100%;
+        padding: 5px;
+        background-color: #d3d3d3;
+    }
+
+    .menu-item-active {
+        position: default;
+        color: #c0392b;
+        margin: 0 auto 0 auto;
+        padding: default;
+        border: 1px solid grey;
+    }
+
+    .menu-item {
+        display: block;
+        border: 1px solid grey;
+        margin: 0 auto 0 auto;
+        padding: default;
+
+    }
+
+    .container.portfolio-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .image {
+        width: calc(100% / 1 - 20px);
+    }
+
+
+    body {
+        background: none;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .footer {
+        margin-top: 3px;
+    }
+
+    /*About me styling start*/
+
+    .wrapper-top {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .wrapper-bottom {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: stretch;
+    }
+
+    .child-3 {
+        display: none;
+    }
+
+
+
+    /*About me styling end*/
+}
+
+/*  Add your CSS here */
