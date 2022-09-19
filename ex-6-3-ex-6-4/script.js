@@ -31,9 +31,9 @@ for (var i = 0; i < movies.length; i++) {
 //For each object in the array, add a new property representing the image of the movie and display it to the page.
 //Add CSS properties to differentiate the seen vs. unseen movies from the list.
 
-movies[0][3] = "save-pvt-ryan.jpg";
-movies[1][3] = "resident-evil.jpg";
-movies[2][3] = "troy.jpg";
+movies[0][3] = "images/save-pvt-ryan.jpg";
+movies[1][3] = "images/resident-evil.jpg";
+movies[2][3] = "images/troy.jpg";
 
 for (var i = 0; i < element.length; i++) {
     element[i].innerHTML += '<h4>' + 'Duration: ' + movies[i].duration + ' min</h4>';
