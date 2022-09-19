@@ -1,0 +1,10 @@
+.image-style{
+    width:200px;
+    margin:5px 3px 2px 3px;
+    border: 2px solid blue;
+    border-radius: 12%;
+}
+
+.image-style-seen{
+    border: 2px solid violet;
+}
